@@ -1,3 +1,4 @@
+/* This area defines the color pallet of the website and provides some default box shadowing and border rounding */
 :root{
     --darkGreen: rgb(26, 83, 26, 0.75);
     --leafGreen: rgb(80, 179, 80, 0.75);
@@ -5,194 +6,206 @@
     --borderRounding: 10px;
     --borderShadow: 1px 1px 3px black;
 }
-
+/* Defining the default text expectations through the website as well as setting a margin to ensure the website is readable.
+     This also sets Flex display as the default to all boxes in the webpage */
 *{ 
-  word-wrap: normal; 
-  font-family: 'Times New Roman', Times, serif; 
-  color: white;
-  text-align: center;
-  display: flex;
-  margin: 1%;
+    color: white;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif; 
+    margin: 1%;
+    text-align: center;
+    word-wrap: normal; 
 }
+
+/* A work around was required here to allow for Flex display to be set as the default without showing the head or script boxes. */
 head{
     display: none;
 }
 script{
     display: none;
 }
+
+/* This defines the background of the website and sets it so that the webpage scrolls and the background image stays static. */
 body{
-    background-image: url("../images/backgroundImage.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
     background-attachment: fixed;
+    background-image: url("../images/backgroundImage.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
     flex: auto;
     flex-direction: column;
     padding: 2%;
 }
 
+/* This sets the basic formating of the header and nav elements.*/
 header{
     background-color: var(--darkGreen);
     border-radius: var(--borderRounding);
     box-shadow: var(--borderShadow);
-    
-    width: 100%;
     margin-bottom: 2%;    
+    width: 100%;
 }
 nav{
     width: 30%;
     justify-content: center;
 }
+
+/* Sets the formating for the Nav ul. */
 header ul{
-    
-    font-size: 25px;
     flex-direction: row;
+    font-size: 25px;
     width: 100%;
 }
+/* Ensures that the li use the entirety of the flex box*/
 header li{
     flex-grow: 1;
-    align-content: center;
 }
+
+/* This allows for the pop up navigation bar under "My Works" */
 .Work-Links {
     flex-direction: column;
     position: relative;
 }
-
-  .Work-Links .Link-Content {
-    display: none;
-    position: relative;
-    bottom: 5%;
-    left: 5%;
-    right: 5%;
+.Work-Links .Link-Content {
     background-color: var(--woodBrown);
-    padding: .5em;
-    min-width: 10rem;
     border-radius: var(--borderRounding);
+    bottom: 5%;
     box-shadow: var(--borderShadow);
+    display: none;
+    left: 5%;
+    min-width: 10rem;
+    position: relative;
+    right: 5%;
+    padding: .5em;
   }
   .Work-Links:hover .Link-Content {
     display: block;
   }
 
+/* Sets formating for About me and My work sections */
 main{
-
     flex-direction: row;
     flex-wrap: nowrap;
+    margin: 0%;
 }
+
+/* Sets base formating for all images on the page*/
 img{
-    max-width: 45%;
-    max-height: 100%;
     border-radius: var(--borderRounding);
     box-shadow: var(--borderShadow);
-    margin: auto;
- 
+    margin: auto; 
+    max-width: 60%;
+    max-height: 100%;
     }
+
+/* Sets formating for all P elements and h elements */
 p{
-    font-size: medium;
-    margin: 10px;
-    text-align: left;
     font-size: 25px;
     line-height: 150%;
+    margin: 10px;
+    text-align: left;
 }
 h1{
+    align-content: left;
     font-size: 50px;
     font-weight: bold;
     width: 70%;
-    align-content: left;
     text-decoration: underline;
 }
 h2{
-    font-size: 40px;
     align-items: center;
+    font-size: 40px;
     justify-content: center;
     text-decoration: underline;
 }
 h3{
     width: 100%;
-    justify-content: center;
-    align-content: center;
     font-size: 30px;
+    justify-content: center;
     text-decoration: underline;
 }
 
+/* Sets base formating for About Me section setting flex box to column  */
 .About-Me{
+    align-items: center;
     background-color: var(--woodBrown);
     border-radius: var(--borderRounding);
-    box-shadow: var(--borderShadow);
-   
+    box-shadow: var(--borderShadow);   
     flex-direction: column;
-    width: 20%;
-    margin-bottom: 2%;
     justify-content: left;
-    align-items: center;
+    margin-bottom: 2%;
+    width: 20%;
 }
 .About-Me img{
     margin: 2%;
 }
 
-
+/* Sets base formating for the My Works section and ensures that the columns do not wrap for formating purposes */
 .My-Work{
     background-color: var(--leafGreen);
     border-radius: var(--borderRounding);
     box-shadow: var(--borderShadow);
-
-    margin-left: 2%;
     flex-flow: column nowrap;
-    width: 80%;
-    justify-content: right;
-    
+    justify-content: right;    
     margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 0%;
+    width: 80%;
 }
+/* Sets formating for anchor tag that nests the image  */
 .My-Work  a{
-    max-width: 45%;
+    max-width: 55%;
     max-height: 100%;
     margin-left: 2%;
-    justify-content: left;
-    
+    justify-content: left;    
 }
+/* Ensures that the image uses the entire anchor tag box. */
 .My-Work img{
-
-    max-width: 100%;
+    max-width: 75%;
     max-height: 100%;
 }
+
+/* Ensures that the contents inside of the div section appear in a row and not in a colum */
 .My-Work div{
     align-content: center;
     flex-direction: row;
-    margin: 1%;
     justify-content: center;
-
+    margin: 1%;
 }
+
+/* Formats the p sections inside of My Work */
 .My-Work p{
-    width: 45%;
+    flex-direction: column;
     justify-content: center;
     margin: 5%;
-    flex-direction: column;
+    width: 45%;
 }
+
+/* Gives the picture for the first project the ability to be larger than the standard picture */
 #projectOne{
     width: 100%;
-    max-height: 100%;
-    
+    max-height: 100%;    
 }
+#projectOne img{
+    max-width: 100%;
+}
+
+/* Allows the footer to to stretch across the bottom of the page and sets basic formating for the box*/
 footer{
     width: 100%;
-}
-footer ul{
-    
-    font-size: 15px;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-}
-footer li{
-    align-content: center;
-    margin: 1%;
-}
-
-
-.Contact-Info{
     background-color: var(--darkGreen);
     border-radius: var(--borderRounding);
     box-shadow: var(--borderShadow);
 }
-img:hover::after{
-    content: attr(alt);    
+
+/* Sets the formatting for the footer items and places them in a row */
+footer ul{    
+    flex-direction: row;
+    font-size: 15px;
+    justify-content: center;
+    width: 100%;
+}
+/* Ensures that the items are centered and there is a margin around them to avoid crowding */
+footer li{
+    align-content: center;
+    margin: 1%;
 }
