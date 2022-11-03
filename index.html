@@ -1,67 +1,93 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/style.css"
+    />
     <title>Shawn Karalash</title>
-</head>
+  </head>
 
-<body>
-    <header>
-        <h1>Shawn Karalash's Portfolio</h1>
-        <nav>            
-            <ul>
-                <li><a href="#About-Me">About Me</a></li>
-                <li class="Work-Links"><a class="Work-Links" href="#My-Work">My Works</a>
-                    <ul class="Link-Content">
-                        <li><a href="#My-Home-Page">My Home Page</a></li>
-                        <li><a href="#My-Study-Guide">My Study Guide</a></li>
-                    </ul>
-                </li>
-                <li><a href="#Contact-Info">Contact Info</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="About-Me" id="About-Me">
-            
-                <img src="./assets/images/profile-picture.jpg" alt="A photo of me and my dog.">
-            
-            <h2>About Me</h2>
-            <p>
-                I was born in Kalamazoo, Michigan but have lived in multiple different states throughout my life. I have no children but am married and we have three dogs and three cats. In 207 completed my Bachelors degree in Psychology at Western Michigan University. I currently work in Child Welfare for the State of Michigan Department of Health and Human Services. I worked in the Foster Care field for three years and have recently changed to working in Children's Protective Services for the last year. Prior to working for MDHHS I worked for the United States Postal Service for two and a half years. I worked at PNC bank for six and a half years prior to the Post Office.<br><br>
-                In my free time I enjoy hiking and being outdoors. Traveling is one of my favorite things and almost all of my trips are road trips. Every Saturday I dungeon master for a game of Dungeons and Dragons, and have been doing that off and on for the last five years. I enjoy many board games in my free time as well as playing video games. 
+  <body class="w-100 h-100">
+    <div
+      id="border-start"
+      class="w-100 h-100"
+    >
+      <div
+        id="border-end"
+        class="w-100 h-100 row"
+      >
+        <header class="row m-5">
+          <h1>Shawn Karalash's Portfolio</h1>
+          <nav>
+            <ul></ul>
+          </nav>
+        </header>
+
+        <main class="row">
+          <section
+            class="About-Me col-6 row m-3"
+            id="About-Me"
+          >
+            <!-- <img
+          src="./assets/images/profile-picture.jpg"
+          alt="A photo of me and my dog."
+        /> -->
+
+            <h2 class="col m-3">Who I am...</h2>
+            <p class="m-3">
+              I was born in Kalamazoo, Michigan but have lived in multiple different states throughout my life. I have
+              no children but am married and we have three dogs and three cats. In 207 completed my Bachelors degree in
+              Psychology at Western Michigan University. I currently work in Child Welfare for the State of Michigan
+              Department of Health and Human Services. I worked in the Foster Care field for three years and have
+              recently changed to working in Children's Protective Services for the last year. Prior to working for
+              MDHHS I worked for the United States Postal Service for two and a half years. I worked at PNC bank for six
+              and a half years prior to the Post Office.<br /><br />
+              In my free time I enjoy hiking and being outdoors. Traveling is one of my favorite things and almost all
+              of my trips are road trips. Every Saturday I dungeon master for a game of Dungeons and Dragons, and have
+              been doing that off and on for the last five years. I enjoy many board games in my free time as well as
+              playing video games.
             </p>
-        </section>
-        <section class="My-Work" id="My-Work">
-            <h2>My Work</h2>
-            <h3 id="My-Home-Page">My Home Page</h3>
-            <div>
-                <a id="projectOne" href="https://ralakash.github.io/">
-                    <img src="./assets/images/homePage.jpg" alt="Portfolio Project 1" >
-                </a>
-                <p> 
-                    This project was completed through CodeCademy and will be replaced as soon as I have the time and know how to make a project I can be proud of. <br><br> This was more of a proof of concept project.
-                </p>
-            </div>
-            <h3 id="My-Study-Guide">My Study Guide</h3>
-            <div>
-                <a href="https://ralakash.github.io/prework-study-guide/">
-                    <img src="./assets/images/preworkStudyGuide.jpg" alt="Portfolio Project 2">
-                </a>
-                <p>
-                    This project was completed through the pre-work and is a study guide. <br><br> I appreciated what I learned in this project, it seems like an extream waste of time for me to formate a website as a study guide when a pen and paper take less time and are more accessable. 
-                </p>
-            </div>
-        </section>
-    </main>
+          </section>
+          <div class="col-1"></div>
+          <section
+            class="My-Work col-3 row m-5"
+            id="My-Work"
+          >
+            <h3 class="col">Projects</h3>
+            <ul class="list-group m-0 align-self-end">
+              <li class="list-group-flush m-2 align-self-end">College Trip</li>
+              <li class="list-group-flush m-2 align-self-end">Project 2(In Progress)</li>
+              <li class="list-group-flush m-2 align-self-end">Project 3(In Progress)</li>
+              <li class="list-group-flush m-2 align-self-end">Personal Project(In Progress)</li>
+              <li class="list-group-flush m-2 align-self-end">Photography Page(In Progress)</li>
+            </ul>
+          </section>
+        </main>
 
-    <footer class="Contact-Info" id="Contact-Info">
-        <ul>
-            <li>Email: <a href="mailto:ShawnKaralash@gmail.com">ShawnKaralash@gmail.com</a></li>
+        <footer
+          class="Contact-Info"
+          id="Contact-Info"
+        >
+          <ul>
+            <!-- <li>Email: <a href="mailto:ShawnKaralash@gmail.com">ShawnKaralash@gmail.com</a></li>
             <li>Github:<a href="Ralakash.github.io"> Ralakash.github.io</a></li>
-            <li>Phone: 269-***-****</li>
-        </ul>
-    </footer>
-</body>
+            <li>Phone: 269-***-****</li> -->
+          </ul>
+        </footer>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
