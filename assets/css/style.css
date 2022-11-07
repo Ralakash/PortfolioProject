@@ -3,13 +3,14 @@
   --darkGreen: rgba(74, 98, 74, 255);
   --leafGreen: rgb(80, 179, 80, 0.75);
   --woodBrown: rgb(97, 57, 31, 0.75);
+  --innerWood: rgb(199, 164, 119);
   --borderRounding: 10px;
   --borderShadow: 1px 1px 3px black;
 }
 /* Defining the default text expectations through the website as well as setting a margin to ensure the website is readable.
      This also sets Flex display as the default to all boxes in the webpage */
 * {
-  color: rgb(199, 164, 119);
+  color: var(--innerWood);
   display: flex;
   font-family: 'Times New Roman', Times, serif;
   text-align: center;
@@ -37,7 +38,26 @@ body {
   width: 100%;
   height: 100%;
 }
-
+nav {
+  display: flex;
+  justify-content: center;
+}
+a {
+  color: var(--innerWood);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--woodBrown);
+  /* text-decoration: underline; */
+}
+i:hover {
+  color: var(--woodBrown);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+}
+#My-Work ul {
+  border-right: 0.5rem solid var(--woodBrown);
+}
 #border-start {
   background-color: var(--woodBrown);
   margin: 0;
@@ -50,25 +70,34 @@ body {
   width: 100%;
   height: 100%;
   clip-path: polygon(
-    1em 4em,
+    1em 8em,
     1em 1em,
-    5em 1em,
-    6em 0,
-    100% 0,
-    100% calc(100% - 6em),
-    calc(100% - 1em) calc(100% - 5em),
+    9em 1em,
+    10em -0.1em,
+    101% -0.1em,
+    101% calc(100% - 10em),
+    calc(100% - 1em) calc(100% - 9em),
     calc(100% - 1em) calc(100% - 1em),
-    calc(100% - 4em) calc(100% - 1em),
-    calc(100% - 5em) 100%,
-    0 100%,
-    0 5em
+    calc(100% - 8em) calc(100% - 1em),
+    calc(100% - 9em) 100%,
+    -0.1em 100%,
+    -0.1em 9em
   );
 }
-
+img {
+  width: 25%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+h1 {
+  width: 50%;
+}
 h2 {
   font-size: 4rem;
 }
 h3 {
   justify-content: center;
   align-self: flex-end;
+}
+p {
+  border-right: 0.5rem solid var(--woodBrown);
 }
